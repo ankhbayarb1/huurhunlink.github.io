@@ -1,0 +1,47 @@
+body{
+background:black;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+height:100vh;
+overflow:hidden;
+}
+
+.text{
+color:#ff4d6d;
+font-size:40px;
+margin-bottom:60px;
+text-shadow:0 0 20px #ff4d6d;
+animation: glow 2s infinite alternate;
+}
+
+@keyframes glow{
+from{
+text-shadow:0 0 10px #ff4d6d;
+}
+to{
+text-shadow:0 0 30px #ff4d6d;
+}
+}
+
+.garden{
+display:flex;
+gap:40px;
+}
+
+.rose{
+width:40px;
+height:40px;
+background:radial-gradient(circle,#ff4d6d,#8b0000);
+border-radius:50%;
+opacity:0;
+transform:translateY(200px) scale(0);
+transition:1s;
+box-shadow:0 0 20px #ff4d6d;
+}
+
+.rose.show{
+opacity:1;
+transform:translateY(0) scale(1.5);
+                           }
